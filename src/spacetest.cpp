@@ -9,12 +9,14 @@ using std::cerr;
 using std::cout;
 using std::endl;
 
+using namespace spacehauc_i2c_mock;
+
 int main(int argc, char* argv[])
 {
   int i = 0;
   cout << "Testing Temperature Sensor" << endl;
-  spacehauc_i2c::MCP9808 tempsensor(0x18);
-  tempsensor.init();
+  MCP9808 tempSensor(0x18);
+  tempSensor.init();
   cout << "Temperature Sensor Initialized" << endl
   << "Reading Temperature Data..." << endl;
   for(i = 0; i<=100; i++)
